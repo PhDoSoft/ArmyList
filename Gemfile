@@ -1,12 +1,17 @@
 source 'https://rubygems.org'
+ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.3'
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'activerecord-jdbcsqlite3-adapter'
+# gem 'sqlite3'
+# gem 'pg'
+# gem 'activerecord-jdbcsqlite3-adapter'
+gem 'activerecord-jdbcpostgresql-adapter'
 
+gem 'puma'
 gem 'jruby-openssl'
 
 

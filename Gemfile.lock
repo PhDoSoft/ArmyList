@@ -23,9 +23,9 @@ GEM
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
     activerecord-jdbc-adapter (1.2.9)
-    activerecord-jdbcsqlite3-adapter (1.2.9)
+    activerecord-jdbcpostgresql-adapter (1.2.9)
       activerecord-jdbc-adapter (~> 1.2.9)
-      jdbc-sqlite3 (~> 3.7.2)
+      jdbc-postgres (>= 9.1, < 9.3)
     activeresource (3.2.13)
       activemodel (= 3.2.13)
       activesupport (= 3.2.13)
@@ -57,7 +57,7 @@ GEM
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
     i18n (0.6.1)
-    jdbc-sqlite3 (3.7.2.1)
+    jdbc-postgres (9.2.1002.1)
     journey (1.0.4)
     jquery-rails (3.0.0)
       railties (>= 3.0, < 5.0)
@@ -73,6 +73,7 @@ GEM
     jruby-openssl (0.8.8)
       bouncy-castle-java (>= 1.5.0147)
     jruby-rack (1.1.13.2)
+    json (1.8.0)
     json (1.8.0-java)
     less (2.3.2)
       commonjs (~> 0.2.6)
@@ -85,6 +86,8 @@ GEM
     mime-types (1.23)
     multi_json (1.7.6)
     polyglot (0.3.3)
+    puma (2.0.1-java)
+      rack (>= 1.1, < 2.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -143,7 +146,7 @@ PLATFORMS
   java
 
 DEPENDENCIES
-  activerecord-jdbcsqlite3-adapter
+  activerecord-jdbcpostgresql-adapter
   bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
   haml
@@ -153,6 +156,7 @@ DEPENDENCIES
   jquery-ui-sass-rails
   jruby-openssl
   less-rails
+  puma
   rails (= 3.2.13)
   therubyrhino
   twitter-bootstrap-rails
